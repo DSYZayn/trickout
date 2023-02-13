@@ -3,6 +3,7 @@ import HelloWorld from './components/HelloWorld.vue'
 import TheWelcome from './components/TheWelcome.vue'
 import {ref} from "vue";
 let msg = ref('You did it!')
+yiYan()
 let timer = setInterval(yiYan, 3000)
 function yiYan(){
   const res = fetch('https://v.api.aa1.cn/api/yiyan/index.php')
