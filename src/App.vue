@@ -2,17 +2,23 @@
 import HelloWorld from './components/HelloWorld.vue'
 import TheWelcome from './components/TheWelcome.vue'
 import {ref} from "vue";
+//临时接入一言，start
 let msg = ref('You did it!')
 yiYan()
-let timer = setInterval(yiYan, 3000)
+let timer = setInterval(yiYan, 3500)
 function yiYan(){
   const res = fetch('https://v.api.aa1.cn/api/yiyan/index.php')
   res.then(data => data.text()).then(data => msg.value = delHtmlTag(data))
   function delHtmlTag(str) {return str.replace(/<[^>]+>/g, "")}
 }
-
-
-
+function stop(){
+  clearInterval(timer)
+}
+function reset(){
+  yiYan()
+  timer = setInterval(yiYan, 3500)
+}
+//一言逻辑结束
 </script>
 
 <template>
@@ -20,7 +26,7 @@ function yiYan(){
     <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
 
     <div class="wrapper">
-      <HelloWorld :msg="msg" />
+      <HelloWorld :msg="msg" @mouseenter="stop" @mouseleave="reset"/>
     </div>
   </header>
 
