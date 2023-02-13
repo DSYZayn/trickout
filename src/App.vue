@@ -1,6 +1,13 @@
 <script setup>
 import HelloWorld from './components/HelloWorld.vue'
 import TheWelcome from './components/TheWelcome.vue'
+import {ref} from "vue";
+let msg = ref('You did it!')
+const res = fetch('https://v.api.aa1.cn/api/yiyan/index.php')
+res.then(data => data.text()).then(data => msg.value = delHtmlTag(data))
+function delHtmlTag(str) {return str.replace(/<[^>]+>/g, "")}
+
+
 </script>
 
 <template>
@@ -8,7 +15,7 @@ import TheWelcome from './components/TheWelcome.vue'
     <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
 
     <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+      <HelloWorld :msg="msg" />
     </div>
   </header>
 
