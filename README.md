@@ -1,29 +1,12 @@
-# vue-project
+# Welcome to my first site code by myself! 
+## https://trickout.onrender.com/
 
-This template should help get you started developing with Vue 3 in Vite.
+===================================================================
+## It's a Vue SPA[^1] App.
+UI ----Element-UI
+PaSS ----render.com
 
-## Recommended IDE Setup
+As you can see,it's just a example App with <font color="green">**vite@v4.1.1**</font> at 'trickout' version 1.0.
+However, it will get ready soon later.
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
+[^1]:An SPA (Single-page application) is a web app implementation that loads only a single web document, and then updates the body content of that single document via JavaScript APIs such as XMLHttpRequest and Fetch when different content is to be shown.
