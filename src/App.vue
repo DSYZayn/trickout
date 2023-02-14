@@ -7,9 +7,9 @@ let msg = ref('You did it!')
 yiYan()
 let timer = setInterval(yiYan, 3500)
 function yiYan(){
-  const res = fetch('https://v.api.aa1.cn/api/yiyan/index.php')
-  res.then(data => data.text()).then(data => msg.value = delHtmlTag(data))
-  function delHtmlTag(str) {return str.replace(/<[^>]+>/g, "")}
+  const res = fetch('https://v1.hitokoto.cn')
+  res.then(response => response.json())
+      .then(data => msg.value = data['hitokoto'])
 }
 function stop(){
   clearInterval(timer)
