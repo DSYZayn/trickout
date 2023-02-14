@@ -1,11 +1,13 @@
 # Welcome to my first site code by myself! 
 ## https://trickout.onrender.com/
+## https://trickout.vercel.app/
+## https://trickout-dsyzayn.vercel.app/
 
 ===================================================================
 ## It's a Vue SPA[^1] App.
 CSS framework ---- TailWind CSS
 UI ----Element-UI
-PaSS ----render.com
+PaSS ----render.com||vercel.com
 
 As you can see,it's just an example App with **vite@v4.1.1** at 'trick-out' version 1.0.
 However, it will get ready soon later.
