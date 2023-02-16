@@ -5,12 +5,13 @@ defineProps(['src','dataPoster'])
 </script>
 
 <template>
-  <div></div>
+  <div>
   <vue-plyr>
     <video id="player" controls playsinline :data-poster="dataPoster">
       <source :src="src" type="video/mp4" />
     </video>
   </vue-plyr>
+  </div>
 </template>
 
 <style scoped>
