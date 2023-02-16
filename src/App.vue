@@ -1,7 +1,7 @@
 <script setup >
 import HelloWorld from './components/HelloWorld.vue'
 import TheWelcome from './components/TheWelcome.vue'
-import MyVideo from './components/MyVideo.vue'
+// import MyVideo from './components/MyVideo.vue'
 import {ref} from "vue";
 
 
@@ -33,7 +33,8 @@ function reset(){
 
     <div class="wrapper">
       <HelloWorld :msg="msg" @mouseenter="stop" @mouseleave="reset"/>
-      <MyVideo :src="data.VITE_SRC"/>
+<!--      <MyVideo/>-->
+      <iframe src="//player.bilibili.com/player.html?aid=768611576&bvid=BV1rr4y1b7cu&cid=585340250&page=1" allowfullscreen> </iframe>
     </div>
   </header>
 
