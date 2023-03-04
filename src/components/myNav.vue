@@ -1,13 +1,13 @@
 <script setup>
+let props = defineProps({items:Array})
 </script>
 
 <template>
   <nav class="flex-col space-y-5">
-    <button class="flex flex-nowrap mx-auto"><House class="icon my-auto mr-1" /><span class="align-middle text-center">主&ensp;&ensp;&ensp;&ensp;页</span></button>
-    <button class="flex flex-nowrap mx-auto"><Tickets class="icon my-auto mr-1"/><span class="align-middle text-center">项目推荐</span></button>
-    <button class="flex flex-nowrap mx-auto"><MagicStick class="icon my-auto mr-1"/><span class="align-middle text-center">实&ensp;验&ensp;室</span></button>
-    <button class="flex flex-nowrap mx-auto"><Avatar class="icon my-auto mr-1"/><span class="align-middle text-center">关&ensp;&ensp;&ensp;&ensp;于</span></button>
-    <button class="flex flex-nowrap mx-auto"><More class="icon my-auto mr-1"/><span class="align-middle text-center">更&ensp;&ensp;&ensp;&ensp;多</span></button>
+    <button v-for="item in props.items" class="flex flex-nowrap mx-auto">
+      <i  :class="['icon', 'text-center', 'mr-2', 'flex', 'iconfont',item.icon]" ></i>
+      <span class="flex" v-html="item.title"></span>
+    </button>
   </nav>
 
 </template>
@@ -15,6 +15,9 @@
 <style scoped>
 @import "tailwindcss/tailwind.css";
 
+@font-face {
+  font-family: iconfont;
+}
 .icon{
   width: 1em;
   height: 1em;
