@@ -20,7 +20,7 @@ function yiYan(){
 <template>
   <div class="common-layout bg-amber-200">
     <el-container class="el-container text-5xl text-center">
-      <el-aside width="200px" class="bg-blue-100 flex-col" >
+      <el-aside width="15vw" class="bg-blue-100 flex-col" >
         <img src="./assets/avatar.svg" alt="" class="w-24 h-24 flex m-auto mb-40 mt-5">
         <my-nav />
 
