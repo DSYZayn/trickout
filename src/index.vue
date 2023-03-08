@@ -2,6 +2,8 @@
 import {ref} from "vue";
 import MyNav from "@/components/myNav.vue";
 import MyMusic from "@/components/myMusic.vue";
+import MySlider from '@/components/mySlider.vue';
+
 
 let hitokoto = ref('')
 //定时一言
@@ -37,17 +39,18 @@ let nav = [
       </el-aside>
       <el-container>
         <el-header class="bg-blue-300 fangSong">{{ hitokoto }}</el-header>
-        <el-main class="bg-amber-50">
+        <el-main class="bg-amber-50 relative">
           <my-music/>
-          <el-row :gutter="20" class="bg-blue-400 mt-40">
+<!--          <my-book/>-->
+          <el-row :gutter="20" class="absolute bottom-5 sm:left-1/3 sm:w-1/3">
             <el-col :span="4">
-              <div class="bg-amber-700 rounded-md min-h-min ">test</div>
+              <div class="rounded-md min-h-min "></div>
             </el-col>
             <el-col :span="16">
-              <div class="bg-amber-700 rounded-md min-h-min ">test</div>
+              <my-slider/> <!--滑动块-->
             </el-col>
             <el-col :span="4">
-              <div class="bg-amber-700 rounded-md min-h-min ">test</div>
+              <div class="rounded-md min-h-min "></div>
             </el-col>
           </el-row>
 
@@ -62,7 +65,8 @@ let nav = [
 
 .fangSong {
   font-family: 宋体 ExtraLight, sans-serif;
-  line-height: 1em;
+  line-height: 3rem;
+  font-size: 1rem;
 }
 
 .el-container {

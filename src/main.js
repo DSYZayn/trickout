@@ -1,5 +1,5 @@
-import { createApp } from 'vue'
-import App from './App.vue'
+import {createApp} from 'vue'
+import App from './index.vue'
 import "tailwindcss/tailwind.css"
 import * as ElementPlusIconsVue from '@element-plus/icons-vue'
 
