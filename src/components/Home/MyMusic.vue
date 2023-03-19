@@ -6,7 +6,7 @@
   <p>一首随机的歌</p>
 
   <el-card class="sm:w-1/3 w-10/12 mt-5 absolute sm:left-1/3 left-1/12 rounded-2xl" :body-style="{padding: '0',background:'#dbe9fe'}">
-      <img src="./../assets/img/music.png" alt="MUSIC">
+      <img src="../../assets/img/music.png" alt="MUSIC">
       <el-row :gutter="20" class="my-auto p-6 flex-nowrap">
         <el-col :span="8">
           <button>

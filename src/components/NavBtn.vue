@@ -1,14 +1,13 @@
 <script setup>
-let props = defineProps({items:Array})
+let props = defineProps(["title","icon","name"])
+
 </script>
 
 <template>
-  <nav class="flex-col space-y-5">
-    <button v-for="item in props.items" class="flex flex-nowrap mx-auto">
-      <i  :class="['icon', 'text-center', 'mr-2', 'flex', 'iconfont',item.icon]" ></i>
-      <span class="flex" v-html="item.title"></span>
+  <button class="flex flex-nowrap mx-auto">
+      <i  :class="['icon', 'text-center', 'mr-2', 'flex', 'iconfont',props.icon]" ></i>
+      <router-link :to="{name:props.name}" v-html="props.title"></router-link>
     </button>
-  </nav>
 
 </template>
 

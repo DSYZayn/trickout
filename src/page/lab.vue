@@ -1,0 +1,11 @@
+<script setup>
+
+</script>
+
+<template>
+  <p class="bg-cyan-600">这是主视图组件lab页面</p>
+</template>
+
+<style scoped>
+
+</style>
