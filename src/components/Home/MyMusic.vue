@@ -9,35 +9,21 @@ const audioList = [{
 let img = ref("src/assets/img/music.jpg");
 
 
-var myHeaders = new Headers();
-myHeaders.append("User-Agent", "Apifox/1.0.0 (https://www.apifox.cn)");
-myHeaders.append("Accept", "*/*");
-myHeaders.append("Host", "api.wqwlkj.cn");
-myHeaders.append("Connection", "keep-alive");
-myHeaders.append("Cookie", "PHPSESSID=i2e5s83r2sio1dutdqde3f66i6");
 
-var requestOptions = {
-  method: 'GET',
-  headers: myHeaders,
-  redirect: 'follow'
-};
 
-fetch("https://api.wqwlkj.cn/wqwlapi/wyy_random.php", requestOptions)
-    .then(response => response.text())
-    .then(result => console.log(result))
-    .catch(error => console.log('error', error));
+
+
 
 
 </script>
 
 <template>
-  <div class="music rounded-xl bg-lime-100 mx-auto">
+  <div class="music rounded-xl bg-lime-100 mx-auto bg-black">
 
     <el-card
             :body-style="{
                           padding:'0px',
-                          background:'#e6eef4',
-                          borderRadius:'0.75rem'}"
+                          background:'#e6eef4'}"
     >
       <p class="text-4xl text-center ">一首随机的歌</p>
 
