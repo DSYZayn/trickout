@@ -104,7 +104,7 @@ var has3d,
 
   },
 
-  // Number of turn-img in the DOM, minimum value: 6
+  // Number of turn_img in the DOM, minimum value: 6
 
   pagesInDOM = 6,
   
@@ -176,7 +176,7 @@ turnMethods = {
     if (has3d && !isTouch && options.acceleration)
       this.transform(translate(0, 0, true));
 
-    // Add turn-img from the DOM
+    // Add turn_img from the DOM
 
     for (i = 0; i<ch.length; i++) {
       if ($(ch[i]).attr('ignore')!='1') {
@@ -251,11 +251,11 @@ turnMethods = {
       if (data.done)
         this.turn('stop');
 
-      // Move turn-img if it's necessary
+      // Move turn_img if it's necessary
       if (page in data.pageObjs)
         turnMethods._movePages.call(this, page, 1);
 
-      // Increase the number of turn-img
+      // Increase the number of turn_img
       if (incPages)
         data.totalPages = lastPage;
 
@@ -271,7 +271,7 @@ turnMethods = {
       // Add page
       turnMethods._addPage.call(this, page);
 
-      // Remove turn-img out of range
+      // Remove turn_img out of range
       turnMethods._removeFromDOM.call(this);
     }
 
@@ -565,7 +565,7 @@ turnMethods = {
     return data.pages[page];
   },
 
-  // Makes turn-img within a range
+  // Makes turn_img within a range
 
   _makeRange: function() {
 
@@ -582,7 +582,7 @@ turnMethods = {
 
   },
 
-  // Returns a range of turn-img that should be in the DOM
+  // Returns a range of turn_img that should be in the DOM
   // Example:
   // - page in the current view, return true
   // * page is in the range, return true
@@ -641,7 +641,7 @@ turnMethods = {
     
   },
 
-  // Releases memory by removing turn-img from the DOM
+  // Releases memory by removing turn_img from the DOM
 
   _removeFromDOM: function() {
 
@@ -694,7 +694,7 @@ turnMethods = {
 
     var data = this.data();
 
-    // Delete all the turn-img
+    // Delete all the turn_img
     if (page=='*') {
       
       while (data.totalPages!==0) {
@@ -718,7 +718,7 @@ turnMethods = {
 
       }
 
-      // Move the turn-img
+      // Move the turn_img
       turnMethods._movePages.call(this, page, -1);
 
       // Resize the size of this flipbook
@@ -743,7 +743,7 @@ turnMethods = {
   
   },
 
-  // Moves turn-img
+  // Moves turn_img
 
   _movePages: function(from, change) {
 
@@ -1124,7 +1124,7 @@ turnMethods = {
     return this;
   },
 
-  // Gets and sets the number of turn-img
+  // Gets and sets the number of turn_img
 
   pages: function(pages) {
 
@@ -1149,7 +1149,7 @@ turnMethods = {
 
   },
 
-  // Checks missing turn-img
+  // Checks missing turn_img
 
   _missing : function(page) {
     
@@ -1583,7 +1583,7 @@ turnMethods = {
     }
   },
 
-  // Calculate the z-index value for turn-img during the animation
+  // Calculate the z-index value for turn_img during the animation
 
   calculateZ: function(mv) {
 
@@ -1677,7 +1677,7 @@ turnMethods = {
 
     } else {
 
-      // Update static turn-img
+      // Update static turn_img
 
       for (page in data.pageWrap) {
 
@@ -1824,7 +1824,7 @@ turnMethods = {
 
       $.extend(data.opts, options);
       
-      // Set turn-img
+      // Set turn_img
 
       if (options.pages)
         this.turn('pages', options.pages);
@@ -3234,7 +3234,7 @@ function findPos(obj) {
 }
 
 // Checks if there's hard page compatibility
-// IE9 is the only browser that does not support hard turn-img
+// IE9 is the only browser that does not support hard turn_img
 
 function hasHardPage() {
   return (navigator.userAgent.indexOf('MSIE 9.0')==-1);

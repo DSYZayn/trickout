@@ -7,40 +7,40 @@ const currentPage = ref(1)
 
 const imgList = ref([
   {
-    url: 'src/assets/fsc/turn-img/1.jpg',
+    url: 'src/assets/fsc/turn_img/1.jpg',
   },
   {
-    url: 'src/assets/fsc/turn-img/2.jpg',
+    url: 'src/assets/fsc/turn_img/2.jpg',
   },
   {
-    url: 'src/assets/fsc/turn-img/3.jpg',
+    url: 'src/assets/fsc/turn_img/3.jpg',
   },
   {
-    url: 'src/assets/fsc/turn-img/4.jpg',
+    url: 'src/assets/fsc/turn_img/4.jpg',
   },
   {
-    url: 'src/assets/fsc/turn-img/5.jpg',
+    url: 'src/assets/fsc/turn_img/5.jpg',
   },
   {
-    url: 'src/assets/fsc/turn-img/6.jpg',
+    url: 'src/assets/fsc/turn_img/6.jpg',
   },
   {
-    url: 'src/assets/fsc/turn-img/7.jpg',
+    url: 'src/assets/fsc/turn_img/7.jpg',
   },
   {
-    url: 'src/assets/fsc/turn-img/8.jpg',
+    url: 'src/assets/fsc/turn_img/8.jpg',
   },
   {
-    url: 'src/assets/fsc/turn-img/9.jpg',
+    url: 'src/assets/fsc/turn_img/9.jpg',
   },
   {
-    url: 'src/assets/fsc/turn-img/10.jpg',
+    url: 'src/assets/fsc/turn_img/10.jpg',
   },
   {
-    url: 'src/assets/fsc/turn-img/11.jpg',
+    url: 'src/assets/fsc/turn_img/11.jpg',
   },
   {
-    url: 'src/assets/fsc/turn-img/12.jpg',
+    url: 'src/assets/fsc/turn_img/12.jpg',
   },
 ])
 
