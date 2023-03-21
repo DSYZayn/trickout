@@ -1,65 +1,70 @@
 <script setup>
+import AudioPlayer from "@liripeng/vue-audio-player"
+import axios from "axios";
+import {ref} from "vue";
+const audioList = [{
+  name: '东西（Cover：林俊呈）',
+  url: 'https://music.163.com/song/media/outer/url?id=2011122001.mp3'
+}]
+let img = ref("src/assets/img/music.jpg");
+
+
+var myHeaders = new Headers();
+myHeaders.append("User-Agent", "Apifox/1.0.0 (https://www.apifox.cn)");
+myHeaders.append("Accept", "*/*");
+myHeaders.append("Host", "api.wqwlkj.cn");
+myHeaders.append("Connection", "keep-alive");
+myHeaders.append("Cookie", "PHPSESSID=i2e5s83r2sio1dutdqde3f66i6");
+
+var requestOptions = {
+  method: 'GET',
+  headers: myHeaders,
+  redirect: 'follow'
+};
+
+fetch("https://api.wqwlkj.cn/wqwlapi/wyy_random.php", requestOptions)
+    .then(response => response.text())
+    .then(result => console.log(result))
+    .catch(error => console.log('error', error));
+
 
 </script>
 
 <template>
-  <p>一首随机的歌</p>
+  <div class="music rounded-xl bg-lime-100 mx-auto">
 
-  <el-card class="sm:w-1/3 w-10/12 mt-5 absolute sm:left-1/3 left-1/12 rounded-2xl" :body-style="{padding: '0',background:'#dbe9fe'}">
-      <img src="../../assets/img/music.png" alt="MUSIC">
-      <el-row :gutter="20" class="my-auto p-6 flex-nowrap">
-        <el-col :span="8">
-          <button>
-            <span class="iconfont icon-shangyiqu align-middle"></span>
-          </button>
-        </el-col>
-        <el-col :span="8">
-          <button>
-            <span class="iconfont icon-24gl-pause2 align-middle"></span>
-          </button>
-        </el-col>
-        <el-col :span="8">
-          <button >
-            <span class="iconfont icon-xiayiqu align-middle"></span>
-          </button>
-        </el-col>
+    <el-card
+            :body-style="{
+                          padding:'0px',
+                          background:'#e6eef4',
+                          borderRadius:'0.75rem'}"
+    >
+      <p class="text-4xl text-center ">一首随机的歌</p>
 
-
-      </el-row>
-
-
+      <img src="./../../assets/img/music.jpg" alt="music">
+      <AudioPlayer
+          ref="audioPlayer"
+          :audio-list="audioList.map((elm) => elm.url)"
+          theme-color="black"/>
     </el-card>
+
+  </div>
+
 
 
 </template>
 
 <style scoped>
+.music{
+  width: 400px;
+}
 p{
   font-family:Oradano-mincho-GSRR,sans-serif;
 }
-
-span{
-  font-size: 40%;
-}
-button {
-  width: 80%;
-  border-radius: 59px;
-  background: #e6eef4;
-  box-shadow:  11px 11px 22px #93989c;
-}
-button:hover {
-  box-shadow: 0 0.1em 0.2rem rgb(45 35 66 / 40%), 0 0.4rem 0.7rem -0.1rem rgb(45 35 66 / 30%), inset 0 -0.1rem 0 rgba(83, 135, 135, 0.75);
-  transform: translateY(-0.1rem);
+img{
+  display: block;
+  width: 100%;
 }
 
-button:active {
-  box-shadow: inset 0 0.1rem 0.6rem #e7e6e2;
-  transform: translateY(0);
-}
-@media (max-width: 640px){
-  .left-1\/12{
-    left: calc(100%/12);
-  }
-}
 
 </style>

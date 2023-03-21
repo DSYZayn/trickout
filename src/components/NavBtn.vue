@@ -40,12 +40,12 @@ button {
 }
 
 button:hover {
-  box-shadow: 0 0.1em 0.2em rgb(45 35 66 / 40%), 0 0.4em 0.7em -0.1em rgb(45 35 66 / 30%), inset 0 -0.1em 0 #3c4fe0;
-  transform: translateY(-0.1em);
+  box-shadow: 0 0.1rem 0.2rem rgb(45 35 66 / 40%), 0 0.4em 0.7em -0.1em rgb(45 35 66 / 30%), inset 0 -0.1em 0 #98c1d9;
+  transform: translateY(-0.1rem);
 }
 
 button:active {
-  box-shadow: inset 0 0.1em 0.6em #3c4fe0;
+  box-shadow: inset 0 0.1rem 0.6rem rgba(83, 135, 135, 0.75);
   transform: translateY(0em);
 }
 

@@ -1,11 +1,17 @@
 <script setup>
-
+import MyMusic from "@/components/Home/MyMusic.vue"
 </script>
 
 <template>
-  <p class="bg-amber-200">这是主视图组件home页面</p>
+  <el-carousel :autoplay="false" :loop="true" type="card" height="635px">
+    <el-carousel-item v-for="item in 4" :key="item" class="bg-transparent">
+      <my-music/>
+    </el-carousel-item>
+  </el-carousel>
 </template>
 
 <style scoped>
+
+
 
 </style>
