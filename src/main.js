@@ -1,6 +1,7 @@
 import {createApp} from 'vue'
 import App from './App.vue'
 import "tailwindcss/tailwind.css"
+import "element-plus/dist/index.css"
 import router from "@/route";
 
 
@@ -11,6 +12,8 @@ const app = createApp(App);
 
 //注入路由
 app.use(router)
+
+
 
 //挂载实例
 app.mount('#app')

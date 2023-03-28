@@ -10,7 +10,8 @@ const projects = () => import("@/page/projects.vue")
 const lab = () => import("@/page/lab.vue")
 const about = () => import("@/page/about.vue")
 const more = () => import("@/page/more.vue")
-
+//特殊视图
+const map = () => import("@/view/MyMap.vue")
 //创建路由模式
 const history = createWebHashHistory()
 //创建路由配置
@@ -60,6 +61,14 @@ const router = createRouter({
             components: {
                 default: more,
                 HeaderView: header,
+            }
+        },
+        {
+            path:'/map',
+            name:'map',
+            components:{
+                default:map,
+                HeaderView:header
             }
         }
     ]

@@ -18,12 +18,12 @@ import MyNav from  "@/view/MyNav.vue"
       </el-aside>
       <el-container>
         <el-header class="bg-amber-50">
+
           <router-view class="view headerView" name="HeaderView">
 
           </router-view>
         </el-header>
-        <el-main class="bg-blue-100">
-
+        <el-main class="bg-blue-50">
           <router-view v-slot="{ Component, route }">
 
             <transition :name="route.meta.transition || 'fade'">
