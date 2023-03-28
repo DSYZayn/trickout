@@ -25,7 +25,7 @@ let img = ref("src/assets/img/music.jpg");
                           padding:'0px',
                           background:'#e6eef4'}"
     >
-      <p class="text-4xl text-center ">一首随机的歌</p>
+      <p class="text-4xl text-center ">A Random Song</p>
 
       <img src="./../../assets/img/music.jpg" alt="music">
       <AudioPlayer

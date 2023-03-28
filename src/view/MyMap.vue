@@ -2,7 +2,11 @@
 import Map from "@arcgis/core/Map.js";
 import config from "@arcgis/core/config.js";
 import MapView from "@arcgis/core/views/MapView.js";
-import {onMounted} from "vue";
+import {onMounted, ref} from "vue";
+import screenfull from "screenfull"
+
+const arcmap = ref(null)
+const full = ref(null)
 
 onMounted(()=>
 {
@@ -20,16 +24,36 @@ onMounted(()=>
       snapToZoom: true
     }
   });
+  view.ui.remove("attribution")
+  full.value.style.visibility="visible"
+
 })
+function fullScreen() {
+  if (screenfull.isEnabled && !screenfull.isFullscreen) {
+    screenfull.request(arcmap.value);
+  }
+}
+function toggleFullScreen() {
+  if (screenfull.isEnabled) {
+    screenfull.toggle();
+  }
+}
+function exitFullScreen() {
+  if (screenfull.isEnabled && screenfull.isFullscreen) {
+    screenfull.exit();
+  }
+}
 
 
 </script>
 
 <template>
-<div id="viewDiv"
-     v-loading="loading"
-     element-loading-text="Loading..."
->
+<div id="viewDiv" ref="arcmap" class="bg-white">
+  <div class="screenfull mt-5 w-10" ref="full">
+
+    <FullScreen @click="fullScreen" class="text-red-800" />
+    <CloseBold @click="exitFullScreen" class="text-red-800"/>
+  </div>
 
 </div>
 </template>

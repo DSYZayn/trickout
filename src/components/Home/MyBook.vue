@@ -80,6 +80,7 @@ const onTurn = () => {
 </script>
 
 <template>
+  <p class="text-4xl text-center ">A book</p>
   <div class="turn-container mx-auto">
     <div class="turn-banner">
       <div class="turn-content">
@@ -92,6 +93,9 @@ const onTurn = () => {
 </template>
 
 <style scoped>
+p{
+  font-family:Oradano-mincho-GSRR,sans-serif;
+}
 .turn-content {
   display: flex;
   margin: 0 auto;
