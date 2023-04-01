@@ -4,7 +4,6 @@ import MyBook from "@/components/Home/MyBook.vue";
 import MyVideo from "@/components/Home/MyVideo.vue"
 
 
-
 </script>
 
 <template>

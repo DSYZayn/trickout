@@ -1,4 +1,6 @@
 import {createRouter, createWebHashHistory} from "vue-router";
+import axios from "axios";
+import {provide} from "vue";
 //动态导入组件--路由懒加载
 //固定的组件
 
@@ -73,4 +75,5 @@ const router = createRouter({
         }
     ]
 })
+
 export default router

@@ -3,6 +3,9 @@ import { ref, nextTick, onMounted } from 'vue'
 import turn from '../../assets/js/turn.js'
 import $ from 'jquery'
 
+
+
+
 const currentPage = ref(1)
 
 const imgList = ref([
@@ -44,6 +47,23 @@ const imgList = ref([
   },
 ])
 
+const bookList = ref([])
+for(let i=1; i<466; i++){
+  if(i<10) {
+    const book = JSON.parse(`{"url":"/simianfeng/simianfeng-00${i}.jpg"}`)
+    console.log(book)
+    bookList.value.push(book)
+  }
+  else if(i>=10 && i<100){
+    const book = JSON.parse(`{"url":"/simianfeng/simianfeng-0${i}.jpg"}`)
+    bookList.value.push(book)
+  }
+  else{
+    const book = JSON.parse(`{"url":"/simianfeng/simianfeng-${i}.jpg"}`)
+    bookList.value.push(book)
+  }
+}
+
 onMounted(() => {
   onTurn()
 })
@@ -64,11 +84,11 @@ const onTurn = () => {
       when: {
         //监听事件
         turning: function (e, page, view) {
-          console.log(e, page, view)
+          // console.log(e, page, view)
           // 翻页前触发
         },
         turned: function (e, page) {
-          console.log(e, page)
+          // console.log(e, page)
           currentPage.value = page
           // 翻页后触发
         },
@@ -80,12 +100,12 @@ const onTurn = () => {
 </script>
 
 <template>
-  <p class="text-4xl text-center ">A book</p>
+  <p class="text-4xl text-center ">A Book</p>
   <div class="turn-container mx-auto">
     <div class="turn-banner">
       <div class="turn-content">
         <div id="flipbook">
-          <el-image v-for="(item, index) in imgList" :key="index" fit="scale-down" :src="item.url" alt="" srcset="" />
+          <el-image v-for="(item, index) in bookList" :key="index" fit="scale-down" :src="item.url" alt="" srcset="" />
         </div>
       </div>
     </div>

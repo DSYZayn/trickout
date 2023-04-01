@@ -45,7 +45,7 @@ $(function(){
         data:{type:'json'},
         async:true,
         success:(data)=>{
-            console.log(data.data)
+            // console.log(data.data)
             ElNotification({
                 title:'Hi~你好',
                 message:data.data.area+'<br/>Hi~ 从'+msgTitle+'来的朋友！<br/>使用 '+ data.data.os +"-"+ data.data.browser +' 访问本站！' + '<br/>' + msg,

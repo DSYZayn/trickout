@@ -33,7 +33,7 @@ button {
   will-change: box-shadow, transform;
   border-radius: 50px;
   background: #D1D8EC;
-  box-shadow: 12px 12px 24px #b2b8c9, -12px -12px 24px #f0f8ff;
+  box-shadow: 12px 12px 24px rgba(128, 128, 128, 0.5), -12px -12px 24px #045870;
   padding: 0 1em;
   line-height: 2.6em;
   transition: box-shadow 0.15s ease, transform 0.15s ease;
