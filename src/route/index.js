@@ -9,7 +9,7 @@ const header = () => import("@/components/YiYan.vue")//固定的头部信息
 
 const home = () => import("@/page/home.vue")
 const projects = () => import("@/page/projects.vue")
-const lab = () => import("@/page/lab.vue")
+const labs = () => import("@/page/lab.vue")
 const about = () => import("@/page/about.vue")
 const more = () => import("@/page/more.vue")
 //特殊视图
@@ -45,7 +45,7 @@ const router = createRouter({
             path: '/lab',
             name: 'lab',
             components: {
-                default: lab,
+                default: labs,
                 HeaderView: header,
             }
         },

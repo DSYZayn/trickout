@@ -1,9 +1,10 @@
 <script setup>
+import WaterFall from "@/components/WaterFall.vue"
 
 </script>
 
 <template>
-  <p>这是主视图组件projects页面</p>
+<water-fall />
 </template>
 
 <style scoped>

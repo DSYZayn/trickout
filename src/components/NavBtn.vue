@@ -33,7 +33,7 @@ button {
   will-change: box-shadow, transform;
   border-radius: 50px;
   background: #D1D8EC;
-  box-shadow: 12px 12px 24px rgba(128, 128, 128, 0.5), -12px -12px 24px #045870;
+  box-shadow: 12px 12px 24px rgba(128, 128, 128, 0.5), -12px -12px 24px #d6ccbf;
   padding: 0 1em;
   line-height: 2.6em;
   transition: box-shadow 0.15s ease, transform 0.15s ease;
@@ -41,7 +41,7 @@ button {
 
 button:hover {
   box-shadow: 0 0.1rem 0.2rem rgb(45 35 66 / 40%), 0 0.4em 0.7em -0.1em rgb(45 35 66 / 30%), inset 0 -0.1em 0 #98c1d9;
-  transform: translateY(-0.1rem);
+  transform: translateY(-0.3rem);
 }
 
 button:active {

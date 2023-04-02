@@ -20,7 +20,7 @@ export default defineConfig({
     }
   },
   server:{
-    port:3000,
+    port:5447,
     proxy: {
       '/music': { // 匹配请求路径，localhost:3000/snow
         target: 'https://api.wqwlkj.cn/', // 代理的目标地址

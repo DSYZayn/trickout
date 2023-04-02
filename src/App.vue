@@ -44,7 +44,7 @@ import MyNav from  "@/view/MyNav.vue"
 
 <style scoped>
 .common-layout{
-  background-image: url('@/assets/img/bg.jpg');
+  background-image: url('@/assets/img/bg1.jpg');
   object-fit: scale-down;
 }
 .el-container{

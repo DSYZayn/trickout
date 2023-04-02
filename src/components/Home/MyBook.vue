@@ -1,57 +1,15 @@
 <script setup>
 import { ref, nextTick, onMounted } from 'vue'
-import turn from '../../assets/js/turn.js'
+import turn from '@/assets/js/turn.js'
 import $ from 'jquery'
-
-
-
 
 const currentPage = ref(1)
 
-const imgList = ref([
-  {
-    url: '/fsc/turn_img/1.jpg',
-  },
-  {
-    url: '/fsc/turn_img/2.jpg',
-  },
-  {
-    url: '/fsc/turn_img/3.jpg',
-  },
-  {
-    url: '/fsc/turn_img/4.jpg',
-  },
-  {
-    url: '/fsc/turn_img/5.jpg',
-  },
-  {
-    url: '/fsc/turn_img/6.jpg',
-  },
-  {
-    url: '/fsc/turn_img/7.jpg',
-  },
-  {
-    url: '/fsc/turn_img/8.jpg',
-  },
-  {
-    url: '/fsc/turn_img/9.jpg',
-  },
-  {
-    url: '/fsc/turn_img/10.jpg',
-  },
-  {
-    url: '/fsc/turn_img/11.jpg',
-  },
-  {
-    url: '/fsc/turn_img/12.jpg',
-  },
-])
-
 const bookList = ref([])
-for(let i=1; i<466; i++){
+for(let i=1; i<50; i++){
   if(i<10) {
     const book = JSON.parse(`{"url":"/simianfeng/simianfeng-00${i}.jpg"}`)
-    console.log(book)
+    // console.log(book)
     bookList.value.push(book)
   }
   else if(i>=10 && i<100){
@@ -70,7 +28,8 @@ onMounted(() => {
 
 const onTurn = () => {
   nextTick(() => {
-    $('#flipbook').turn({
+    const flipbook = $('#flipbook')
+    flipbook.turn({
       height: 490, //高度
       width: 760, //宽度
       display: 'double', //单页显示/双页显示  single/double
@@ -80,7 +39,7 @@ const onTurn = () => {
       autoCenter: true, //自动居中, 默认false
       acceleration: true, //硬件加速, 默认true, 如果是触摸设备设置为true
       page: 1, //设置当前显示第几页
-      pages: imgList.value.length, //总页数
+      pages: bookList.value.length, //总页数
       when: {
         //监听事件
         turning: function (e, page, view) {

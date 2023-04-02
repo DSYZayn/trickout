@@ -24,22 +24,21 @@ function getMusic(){
           isSkeletonShow.value = false
         })
 }
-watch(urls,()=>{
-  console.log(isCardShow)
-  console.log(urls.value[0])})
+
 </script>
 
 <template>
 
   <div class="music rounded-2xl bg-lime-100 mx-auto bg-transparent">
-    <el-skeleton v-if="isSkeletonShow" class="w-full h-100 bg-blend-color" animated>
+    <el-skeleton v-if="isSkeletonShow" style="width: 400px;height: 500px;background:rgba(255,255,255,0.2);backdrop-filter: blur(50px)" animated>
       <el-card
           :body-style="{
                           padding:'0px',
+                          backgroundColor:'blue',
                           borderRadius:'5rem'}"
       >
         <el-skeleton-item variant="p"/>
-        <el-skeleton-item variant="image" class="w-full h-20"/>
+        <el-skeleton-item variant="image" style="width: 400px;height: 500px"/>
         <el-skeleton-item variant="h1" class="w-full"/>
       </el-card>
     </el-skeleton>
@@ -65,13 +64,13 @@ watch(urls,()=>{
 
 <style scoped>
 .h-100{
-  height: 500px;
+  height: 800px;
 }
 .music{
   width: 400px;
 }
 p{
-  font-family:仿宋,sans-serif;
+  font-family:Oradano-mincho-GSRR,Helvetica,sans-serif;
 }
 img{
   display: block;
