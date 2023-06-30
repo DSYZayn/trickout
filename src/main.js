@@ -3,11 +3,11 @@ import {createApp} from 'vue'
 import App from './App.vue'
 import "tailwindcss/tailwind.css"
 import "element-plus/dist/index.css"
-import router from "@/route";
+import router from "@/route/routes";
 import * as ElementPlusIconsVue from "@element-plus/icons-vue"
 import {VueMasonryPlugin} from "vue-masonry";
 import hljsVuePlugin from '@highlightjs/vue-plugin';
-import 'highlight.js/styles/stackoverflow-light.css'
+import 'highlight.js/styles/stackoverflow-dark.css'
 
 //创建app
 const app = createApp(App);

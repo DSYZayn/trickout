@@ -1,10 +1,14 @@
 <script setup>
 import {computed, onMounted, ref} from "vue";
 
+
+let hitokoto = ref('')//一言文字
+let p = ref('')//一言标签
 onMounted(()=>{
   yiYan()
+
 })
-let hitokoto = ref('')//一言文字
+
 //定时一言
 
 setInterval(yiYan, 10000)
@@ -21,12 +25,11 @@ function yiYan() {
       })
       .catch(console.error)
 }
-
 </script>
 
 <template>
 
-    <p class="mx-auto font-serif text-3xl truncate typing mt-5">{{ hitokoto }}</p>
+    <p class="mx-auto font-serif text-3xl truncate typing mt-5">{{hitokoto}}</p>
 
 
 </template>

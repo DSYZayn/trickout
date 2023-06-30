@@ -10,8 +10,6 @@ const mycode = ref("import {createApp} from 'vue'\n" +
     "import hljsVuePlugin from '@highlightjs/vue-plugin';\n" +
     "import 'highlight.js/styles/stackoverflow-dark.css'\n" +
     "import 'highlight.js/lib/common'")
-
-
 </script>
 
 <template>
