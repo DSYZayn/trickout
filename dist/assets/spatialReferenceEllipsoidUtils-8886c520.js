@@ -1,0 +1,1 @@
+import{f as s,g as r,h as t,i as w,A as c,P as i,E as a,j as m}from"./Extent-52b65909.js";const E=new s(r),f=new s(t),o=new s(w);new s(c);function u(n){return n&&(i(n)||a(n,f))?f:n&&(m(n)||a(n,o))?o:E}export{u as c};
