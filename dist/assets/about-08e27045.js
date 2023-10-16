@@ -1,1 +1,0 @@
-import{_ as e,a as t,b as o}from"./index-c5dc512b.js";import"./preload-helper-101896b7.js";const c={};function r(a,n){return o(),t("p",null,"这是主视图组件about页面")}const f=e(c,[["render",r]]);export{f as default};
